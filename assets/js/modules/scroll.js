@@ -5,26 +5,28 @@ function valueLimit(val, min, max) {
 function scrollFunction(scrollValue) {
 	let scrolled = Math.floor(document.documentElement.scrollTop);
 
-	// if (document.body.scrollTop > scrollValue || document.documentElement.scrollTop > scrollValue) {
-	// 	// What happens when scrolled down
+	if (document.body.scrollTop > scrollValue || document.documentElement.scrollTop > scrollValue) {
+		// What happens when scrolled down
 
-	// 	document.querySelector('header .homeLink').style.fontSize = "3.5rem";
+		document.querySelector('header .homeLink').style.fontSize = "3.5rem";
 
-	// 	document.querySelector('header .homeLink span').style.fontSize = "0";
+		document.querySelector('header .homeLink span').style.fontSize = "0";
+		console.log('scrolled down')
 
-	// } else {
-	// 	// What happens when scrolled back up
+	} else {
+		// What happens when scrolled back up
 
-	// 	document.querySelector('header .homeLink').style.fontSize = "4.5rem";
+		document.querySelector('header .homeLink').style.fontSize = "4.5rem";
 
-	// 	document.querySelector('header .homeLink span').style.fontSize = "1.25rem";
+		document.querySelector('header .homeLink span').style.fontSize = "1.25rem";
+		console.log('scrolled up')
 		
-	// }
-	console.log(`${(scrolled / scrollValue) * 100}% scrolled !`)
+	}
+	// console.log(`${(scrolled / scrollValue) * 100}% scrolled !`)
 
-	document.querySelector('header .homeLink').style.fontSize = `${valueLimit(1-(scrolled / scrollValue), 0, 1) + 3.5}rem`;
+	// document.querySelector('header .homeLink').style.fontSize = `${valueLimit(1-(scrolled / scrollValue), 0, 1) + 3.5}rem`;
 
-	document.querySelector('header .homeLink span').style.fontSize = `${Math.floor(valueLimit(1-(scrolled / scrollValue), 0, 1)) * 1.25}rem`;
+	// document.querySelector('header .homeLink span').style.fontSize = `${Math.floor(valueLimit(1-(scrolled / scrollValue), 0, 1)) * 1.25}rem`;
 		
 }
 
