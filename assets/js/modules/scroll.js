@@ -3,30 +3,29 @@ function valueLimit(val, min, max) {
 }
 
 function scrollFunction(scrollValue) {
-	let scrolled = Math.floor(document.documentElement.scrollTop);
+	const homeLink = document.querySelector('header .homeLink');
+	const subtitle = document.querySelector('header .homeLink span');
+	const nav = document.querySelector('header nav');
+	const anchorTop = document.querySelector('.anchorTop');
 
 	if (document.body.scrollTop > scrollValue || document.documentElement.scrollTop > scrollValue) {
 		// What happens when scrolled down
 
-		document.querySelector('header .homeLink').style.fontSize = "3.5rem";
-
-		document.querySelector('header .homeLink span').style.fontSize = "0";
-		console.log('scrolled down')
+		homeLink.style.fontSize = "3.5rem";
+		subtitle.style.fontSize = "0";
+		nav.style.fontSize = "0";
+		anchorTop.style.opacity="1";
+		anchorTop.style.pointerEvents="auto";
 
 	} else {
 		// What happens when scrolled back up
 
-		document.querySelector('header .homeLink').style.fontSize = "4.5rem";
-
-		document.querySelector('header .homeLink span').style.fontSize = "1.25rem";
-		console.log('scrolled up')
-		
+		homeLink.style.fontSize = "4.5rem";
+		subtitle.style.fontSize = "1.25rem";
+		nav.style.fontSize = "1.25rem";
+		anchorTop.style.opacity="0";
+		anchorTop.style.pointerEvents="none";
 	}
-	// console.log(`${(scrolled / scrollValue) * 100}% scrolled !`)
-
-	// document.querySelector('header .homeLink').style.fontSize = `${valueLimit(1-(scrolled / scrollValue), 0, 1) + 3.5}rem`;
-
-	// document.querySelector('header .homeLink span').style.fontSize = `${Math.floor(valueLimit(1-(scrolled / scrollValue), 0, 1)) * 1.25}rem`;
 		
 }
 

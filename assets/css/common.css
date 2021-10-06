@@ -10,11 +10,13 @@
     --celtic: #196DC2;
     --dark-blue: #08539E;
     --little-boy: #4FA3F7;
+    --smallest-boy: #b6d9fc;
 }
 
 html {
     font-family: 'DM Sans', sans-serif;
     background-color: var(--celtic);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -32,7 +34,7 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1200px;
 }
 
 a {
@@ -47,6 +49,8 @@ h1, h2, h3 {
 header {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+
     background-color: var(--dark-blue);
     position: fixed;
     width: 100%;
@@ -55,12 +59,32 @@ header {
     overflow-anchor: none;
 }
 
+.anchorTop {
+    position: fixed;
+    z-index: 11;
+    top: 1rem;
+    left: 1rem;
+    font-size: 2rem;
+    text-transform: none;
+    color: var(--little-boy);
+    opacity: 0;
+    pointer-events: none;
+
+
+    transition: color 0.15s, opacity 0.25s;
+}
+
+.anchorTop:hover {
+    color: var(--smallest-boy);
+}
+
 header .homeLink {
     font-family: 'Paradox', sans-serif;
     text-transform: uppercase;
     font-size: 4.5rem;
     letter-spacing: -0.1rem;
     
+    flex-basis: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,7 +96,7 @@ header .homeLink {
 }
 
 header .homeLink:hover {
-    color: hsl(210, 91%, 85%);
+    color: var(--smallest-boy);
 }
 
 header .homeLink span {
@@ -90,9 +114,42 @@ header .homeLink:hover span {
     letter-spacing: 0.35rem;
 }
 
+header nav {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: var(--little-boy);
+    font-size: 1.25rem;
+
+    transition: color 0.15s, font-size 0.15s;
+}
+
+header nav a {
+    display: inline-block;
+    width: 100%;
+    padding: 0.25rem 0;
+    text-align: center;
+
+    transition: color 0.15s, letter-spacing 0.15s, font-size 0.15s;
+}
+
+header nav a:hover {
+    color: var(--smallest-boy);
+    letter-spacing: 0.05rem;
+}
+
 main {
+    padding-top: 3rem;
     margin: auto;
     font-size: 4rem;
-    /* background-color: var(--dark-blue); */
-    backdrop-filter: blur(10px);
+    background-color: var(--smallest-boy);
+}
+
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    main {
+        background-color: rgba(255, 255, 255, .15);
+        -webkit-backdrop-filter: blur(0.5rem);
+        backdrop-filter: blur(0.5rem);
+      }
 }
