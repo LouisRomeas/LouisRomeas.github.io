@@ -3,7 +3,7 @@ function valueLimit(val, min, max) {
 }
 
 function scrollFunction(scrollValue) {
-	let scrolled = document.documentElement.scrollTop;
+	let scrolled = Math.floor(document.documentElement.scrollTop);
 
 	// if (document.body.scrollTop > scrollValue || document.documentElement.scrollTop > scrollValue) {
 	// 	// What happens when scrolled down
@@ -24,7 +24,7 @@ function scrollFunction(scrollValue) {
 
 	document.querySelector('header .homeLink').style.fontSize = `${valueLimit(1-(scrolled / scrollValue), 0, 1) + 3.5}rem`;
 
-	document.querySelector('header .homeLink span').style.fontSize = `${valueLimit(1-(scrolled / scrollValue), 0, 1.25)}rem`;
+	document.querySelector('header .homeLink span').style.fontSize = `${Math.round(scrolled / scrollValue) * 1.25}rem`;
 		
 }
 
