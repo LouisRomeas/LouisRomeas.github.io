@@ -24,7 +24,7 @@ function scrollFunction(scrollValue) {
 
 	document.querySelector('header .homeLink').style.fontSize = `${valueLimit(1-(scrolled / scrollValue), 0, 1) + 3.5}rem`;
 
-	document.querySelector('header .homeLink span').style.fontSize = `${Math.round(valueLimit(scrolled / scrollValue, 0, 1)) * 1.25}rem`;
+	document.querySelector('header .homeLink span').style.fontSize = `${Math.floor(valueLimit(1-(scrolled / scrollValue), 0, 1)) * 1.25}rem`;
 		
 }
 
