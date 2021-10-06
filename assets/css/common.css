@@ -7,13 +7,14 @@
 
 :root {
     --azure: #007FFF;
+    --celtic: #196DC2;
     --dark-blue: #08539E;
     --little-boy: #4FA3F7;
 }
 
 html {
     font-family: 'DM Sans', sans-serif;
-    background-color: var(--dark-blue);
+    background-color: var(--celtic);
 }
 
 body {
@@ -30,6 +31,10 @@ body {
     height: 100vh;
 }
 
+.container {
+    max-width: 900px;
+}
+
 a {
     color: inherit;
     text-decoration: inherit;
@@ -44,7 +49,8 @@ header {
     justify-content: center;
     background-color: var(--dark-blue);
     position: sticky;
-    top: 0
+    top: 0;
+    z-index: 10;
 }
 
 header .homeLink {
@@ -80,8 +86,9 @@ header .homeLink:hover span {
     letter-spacing: 0.35rem;
 }
 
-.container {
-    max-width: 900px;
+main {
     margin: auto;
-    font-size: 3rem;
+    font-size: 4rem;
+    /* background-color: var(--dark-blue); */
+    backdrop-filter: blur(10px);
 }
