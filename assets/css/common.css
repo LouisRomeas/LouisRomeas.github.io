@@ -1,11 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Quicksand:wght@400;700&display=swap');
 
+:root {
+    --blue-base: #007FFF;
+}
+
 html {
     font-family: 'DM Sans', sans-serif;
 }
 
 h1, h2, h3 {
     font-family: 'Quicksand', sans-serif;
+}
+
+header {
+
+}
+
+header .homeLink {
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
 }
 
 main {
