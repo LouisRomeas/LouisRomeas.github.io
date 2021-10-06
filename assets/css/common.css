@@ -40,6 +40,7 @@ header .homeLink {
     font-family: 'Paradox', sans-serif;
     text-transform: uppercase;
     font-size: 4.5rem;
+    letter-spacing: -0.1rem;
     
     display: flex;
     flex-direction: column;
