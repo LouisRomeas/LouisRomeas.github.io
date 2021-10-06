@@ -1,11 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Quicksand:wght@400;700&display=swap');
 
+@font-face {
+    font-family: 'Paradox';
+    src: url('/assets/fonts/Paradox.woff2');
+}
+
 :root {
-    --blue-base: #007FFF;
+    --azure: #007FFF;
+    --dark-blue: #08539E;
+    --little-boy: #4FA3F7;
 }
 
 html {
     font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    margin: 0
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
 }
 
 h1, h2, h3 {
@@ -13,14 +29,43 @@ h1, h2, h3 {
 }
 
 header {
-
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark-blue);
 }
 
 header .homeLink {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Paradox', sans-serif;
     text-transform: uppercase;
+    font-size: 5rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--little-boy);
+    margin: 0.5rem 0;
+
+    transition: color 0.15s;
 }
 
-main {
+header .homeLink:hover {
+    color: hsl(210, 91%, 85%);
+}
+
+header .homeLink span {
+    font-family: 'Quicksand', sans-serif;
+    text-transform: none;
+    display: block;
+    font-size: 1.25rem;
+    letter-spacing: 0.35rem;
+    
+    transition: letter-spacing 0.2s;
+}
+
+header .homeLink:hover span {
+    letter-spacing: 0.45rem;
+}
+
+.container {
     
 }
