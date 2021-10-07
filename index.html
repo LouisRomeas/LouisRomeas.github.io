@@ -28,9 +28,15 @@
 
     <main class="container">
         <h1>Ceci est mon site</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi officiis minima unde obcaecati architecto nostrum laborum, delectus voluptas repellat repellendus earum quod, harum accusamus. Animi eius corrupti, omnis distinctio expedita accusamus iusto aut sint nihil, voluptatibus saepe autem maxime blanditiis laborum placeat provident eum unde modi! Necessitatibus nostrum veniam eaque!
-        </p>
+
+        <form onkeydown="return event.key != 'Enter'">
+            <input type="text" name="search" id="searchBox">
+            <button type="button" id="searchGo">Rechercher</button>
+        </form>
+
+        <section id="content">
+
+        </section>
     </main>
 
     <script src="/assets/js/plugins/particles.min.js"></script>

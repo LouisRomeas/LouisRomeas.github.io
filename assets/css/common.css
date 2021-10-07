@@ -16,7 +16,7 @@
 
 html {
     font-family: 'DM Sans', sans-serif;
-    background-color: var(--celtic);
+    background-color: var(--little-boy);
     scroll-behavior: smooth;
 }
 
@@ -149,17 +149,7 @@ header nav a:hover {
 }
 
 main {
-    padding-top: 3rem;
     margin: auto;
-    font-size: 4rem;
     background-color: var(--smallest-boy);
-}
-
-
-@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-    main {
-        background-color: rgba(255, 255, 255, .15);
-        -webkit-backdrop-filter: blur(0.5rem);
-        backdrop-filter: blur(0.5rem);
-      }
+    padding: 8rem 2rem 1rem;
 }
